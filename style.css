@@ -1,0 +1,100 @@
+:root {
+  --base-color: #ffffff;
+  --spacing: 0px;
+  --blur-size: 0rem;
+  --border-radius : 0px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  background-color: #193549;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 50%;
+  padding: var(--spacing);
+  background-color: var(--base-color);
+  filter: blur(var(--blur-size));
+  margin-bottom: 10rem;
+  border-radius: var(--border-radius);
+}
+
+h1 {
+  margin-top: 5rem;
+  font-size: 12rem;
+  text-align: center;
+}
+
+.controles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+}
+
+.high-light {
+  color: var(--base-color);
+}
+
+input[type=range] {
+  width: 50%;
+  appearance: none;
+  cursor: pointer;
+  height: 1px;
+}
+
+input[type=color] {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  outline: none;
+}
+
+p {
+  font-size: 2rem;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  border-radius: 9999px;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: var(--base-color);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  border-radius: 99999px;
+  background: var(--base-color);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
