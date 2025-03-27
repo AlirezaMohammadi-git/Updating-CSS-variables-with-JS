@@ -5,76 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Update CSS Variables</title>
 </head>
 
 <body>
 
   <h1 class="txt-header">Update CSS Variables with <span class="high-light">JS</span></h1>
 
-  <div class="controles-container">
+  <div class="controls-container">
     <p>Spacing</p>
-    <input id="spacingRange" class="slider" type="range" min="0" max="1000">
+    <input name="spacing" id="spacingRange" class="slider" type="range" min="0" max="1000" data-sizing="px">
   </div>
 
-  <div class="controles-container">
+  <div class="controls-container">
     <p>Blur</p>
-    <input class="slider" min="0" max="100" type="range" id="blurRange">
+    <input name="blur-size" class="slider" min="0" max="100" type="range" id="blurRange" data-sizing="px">
   </div>
 
-  <div class="controles-container">
+  <div class="controls-container">
     <p>Border Radius</p>
-    <input class="slider" min="0" max="100" type="range" id="borderRange">
+    <input name="border-radius" class="slider" min="0" max="100" type="range" id="borderRange" data-sizing="px">
   </div>
 
-  <div class="controles-container">
+  <div class="controls-container">
     <p>Base Color</p>
-    <input type="color" id="colorPicker">
+    <input name="base-color" type="color" id="colorPicker">
   </div>
 
   <img src="img/best-nature-image.jpg" alt="nature image" id="main-img">
 
-  <script>
-
-    const colorPicker = document.querySelector("#colorPicker")
-    const spacingRange = document.querySelector('#spacingRange')
-    const blurRange = document.querySelector("#blurRange")
-    const image = document.querySelector("#main-img")
-    const borderRadius = document.querySelector('#borderRange')
-
-    // initial values
-    colorPicker.value = '#ffffff';
-    spacingRange.value = 0;
-    blurRange.value = 0;
-    borderRadius.value = 0;
-
-
-    // events to change values
-    colorPicker.addEventListener('change', updateColor)
-    spacingRange.addEventListener('change', updateSpacing)
-    blurRange.addEventListener('change', updateBlur)
-    borderRadius.addEventListener('change', updateBorderRadius)
-
-    // functions
-    function updateColor() {
-      document.documentElement.style.setProperty('--base-color', colorPicker.value)
-      console.log(`color picker value : ${colorPicker.value}`)
-    }
-
-    function updateSpacing() {
-      document.documentElement.style.setProperty('--spacing', `${spacingRange.value / 10}px`)
-      console.log(`spacing value : ${(spacingRange.value / 10)}`)
-    }
-
-    function updateBlur() {
-      document.documentElement.style.setProperty('--blur-size', `${blurRange.value}px`)
-      console.log(`blur value : ${blurRange.value}`)
-    }
-
-    function updateBorderRadius() {
-      document.documentElement.style.setProperty('--border-radius', `${borderRadius.value}px`)
-      console.log(`border radius value : ${borderRadius.value}`)
-    }
-  </script>
+  <script src="secondScript.js"></script>
 
 </body>
